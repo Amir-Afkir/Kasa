@@ -1,0 +1,65 @@
+.collapse {
+    width: 100%;
+    max-width: 1023px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #f8f8f8;
+  }
+  
+  .collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #ff6060;
+    color: white;
+    cursor: pointer;
+    height: 52px;
+    box-sizing: border-box;
+  }
+  
+  .icon {
+    font-size: 28px;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(180deg); 
+  }
+  
+  .icon.open {
+    transform: rotate(0deg); 
+  }
+  
+  H3 {
+    font-size: 24px;
+  }
+  
+
+  p {
+    font-size: 18px;
+    line-height: 25.67px;
+    margin : 0;
+    font-weight: 400;
+  }
+
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+  
+  .collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 15px;
+  }
+  
+  .collapse-content.show {
+    max-height: 200px; 
+    padding: 15px;
+  }
+  
