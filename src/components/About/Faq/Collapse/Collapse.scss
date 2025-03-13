@@ -63,3 +63,54 @@
     padding: 15px;
   }
   
+  .property-collapses {
+    display: flex;
+    gap: 75px; 
+    align-items: flex-start;  
+  }
+
+
+  .equipments-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  
+    li {
+      font-size: 18px; 
+      line-height: 25.67px;
+      color: #333;
+    }
+  }
+  
+
+      /** Version mobile **/
+      @media (max-width: 768px) {
+        H3 {
+          font-size: 13px;
+        }
+        p {
+          font-size: 12px;
+        }
+        .collapse {
+          width: 100%;
+          max-width: 1023px;
+          margin: 20px auto; 
+        }
+        
+        .property-collapses {
+          display: block;
+          margin:0
+        }
+        .collapse-header { 
+          height: 30px;
+        }
+
+        .equipments-list { 
+          li {
+            font-size: 12px; 
+            line-height: 17.11px;
+            color: #333;
+          }
+        }
+        
+  } 

@@ -55,3 +55,23 @@
     box-sizing: border-box;
   }
 }
+
+    /** Version mobile **/
+    @media (max-width: 768px) {
+      .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); // ✅ Adapte le nombre de colonnes automatiquement
+        gap: 30px 20px; // ✅ Espacement entre les cartes
+        justify-content: center;
+        justify-items: center;
+        margin: 30px auto;
+        padding: 0;
+        background: none;
+        border-radius: 25px;
+      }
+
+      .Gallery {
+        width: 335px;
+        height: 255px; 
+        }
+    }

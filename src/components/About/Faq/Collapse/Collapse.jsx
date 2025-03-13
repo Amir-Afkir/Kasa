@@ -5,19 +5,21 @@ import "./Collapse.scss";
 function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleCollapse = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="collapse">
-      <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
+      <div className="collapse-header" onClick={toggleCollapse}>
         <h3>{title}</h3>
         <FaChevronDown className={`icon ${isOpen ? "open" : ""}`} />
       </div>
       <div className={`collapse-content ${isOpen ? "show" : ""}`}>
-        <p>{content}</p>
+       <p>{content}</p>
       </div>
-      
     </div>
   );
 }
 
 export default Collapse;
- 

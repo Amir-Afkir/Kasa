@@ -25,3 +25,25 @@
     color : white;
   }
 }
+
+
+    /** Version mobile **/
+    @media (max-width: 768px) {
+      .footer {
+        padding: 30px 0 27px;
+        height : 209px;
+        box-sizing: border-box;
+
+        .footer-logo img {
+          height: 40px;
+          margin: 10px 0;
+        }
+      
+        p {
+          font-size: 12px;
+          line-height: 17.11px;
+          text-align: center;   
+          width: 130px;       
+        }
+      }
+    }

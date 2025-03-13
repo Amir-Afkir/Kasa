@@ -1,0 +1,32 @@
+.property-rating {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  .star {
+    font-size: 24px;
+    color: lightgray;
+  }
+
+  .star.filled {
+    color: #FF6060; 
+  }
+}
+
+/** Version mobile **/
+@media (max-width: 768px) {
+  .property-rating {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  
+    .star {
+      font-size: 18px;
+      color: lightgray;
+    }
+  
+    .star.filled {
+      color: #FF6060; 
+    }
+  }
+}

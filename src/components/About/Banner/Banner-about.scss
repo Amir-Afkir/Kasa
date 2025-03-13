@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-
     height: 223px;
     border-radius: 25px;
     overflow: hidden;
@@ -11,7 +10,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 
     &::after {
         content: "";
@@ -23,5 +21,10 @@
         background: rgba(0, 0, 0, 0.3);
         z-index: 1;
     }
-    
+
+    /** Version mobile **/
+    @media (max-width: 768px) {
+        height: 111px; // Hauteur réduite
+        border-radius: 15px; // Ajustement des bordures
+    }
 }

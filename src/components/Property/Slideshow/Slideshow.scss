@@ -1,0 +1,101 @@
+.slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .slideshow-controls {
+        position: absolute;
+        top: 50%; 
+        width: 100%;
+        display: flex;
+        transform: translateY(-50%);
+        padding: 0;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;   
+
+        button {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-size: 200px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            height: 100%;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; // 🔥 Transition fluide
+
+            &:hover { 
+                opacity: 0.8; // 🔍 Légère transparence sur hover
+             }
+        }
+
+        .prev {
+            position: absolute;
+            left: 10px;
+        }
+
+        .next {
+            position: absolute;
+            right: 10px;
+        }
+    }
+
+    .slideshow-counter {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: transparent ; 
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+    /** Version mobile **/
+    @media (max-width: 768px) {
+    /** Version mobile **/
+    @media (max-width: 768px) {
+        .slideshow {
+            position: relative; 
+            height: 255px; 
+            border-radius: 10px;
+        
+            .slideshow-controls { 
+                button {
+                    font-size: 65px;
+                }
+            }
+
+            // 🔥 Supprimer le compteur en mobile
+            .slideshow-counter {
+                display: none;
+            }
+        }
+    }
+
+      }
