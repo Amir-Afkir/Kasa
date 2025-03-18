@@ -5,7 +5,7 @@ import Slideshow from "../components/Property/Slideshow/Slideshow.jsx";
 import Tags from "../components/Property/Tags/Tags.jsx";
 import Rating from "../components/Property/Rating/Rating.jsx";
 import Host from "../components/Property/Host/Host.jsx";
-import Collapse from "../components/About/Faq/Collapse/Collapse.jsx";
+import Collapse from "../components/common/Collapse/Collapse.jsx";
 import "./Property.scss";
 
 function Property() {

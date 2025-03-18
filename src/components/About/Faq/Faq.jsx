@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Faq.scss";
-import Collapse from "../Faq/Collapse/Collapse.jsx";
+import Collapse from "../../common/Collapse/Collapse.jsx";
 
 const faqData = [
   { id: 1, title: "Fiabilité", content: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes." },

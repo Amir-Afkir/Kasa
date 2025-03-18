@@ -4,8 +4,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Property from "./pages/Property/";
 import Error from "./pages/Error";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Header from "./components/common/Header/Header";
+import Footer from "./components/common/Footer/Footer";
 
 function App() {
   return (
