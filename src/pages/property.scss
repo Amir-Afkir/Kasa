@@ -1,60 +1,54 @@
+@use "../Styles/global.scss" as *;
+
+/* === PROPERTY CONTAINER === */
 .property-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 20px;
+  @extend .container;
+}
+
+/* === PROPERTY INFO === */
+.property-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* === PROPERTY TITLE === */
+.property-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+  h1 {
+    color: #FF6060;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 51.34px;
   }
-  
+
+  p {
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.67px;
+    margin: 5px 0;
+  }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
   .property-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-  
-    .property-title {
-      display: flex;
-      flex-direction: column; 
-      align-items: flex-start; 
-      text-align: left; 
-
-      h1 {  
-        color: #FF6060;  
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 51.34px;
-        text-align: left; 
-      }
-  
-      p {
-        color: #000;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 25.67px;
-        margin: 5px 0;
-      }
-    }
+    display: block;
   }
 
+  .property-title h1 {
+    font-size: 18px;
+    line-height: 25.67px;
+  }
 
-    /** Version mobile **/
-    @media (max-width: 768px) {
-
-      .property-info, .property-title {
-        display: block;
-  
-        .property-title h1 {  
-          color: #FF6060;  
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 25.67px;
-          text-align: left;
-        }
-    
-        .property-title p {
-          color: #000;
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 19.96px;
-          margin: 5px 0;
-        }
-      }
-    } 
+  .property-title p {
+    font-size: 14px;
+    line-height: 19.96px;
+  }
+}

@@ -1,116 +1,106 @@
-.collapse {
-    width: 100%;
-    max-width: 1023px;
-    margin: 30px auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    background: #f8f8f8;
-  }
-  
-  .collapse-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background: #ff6060;
-    color: white;
-    cursor: pointer;
-    height: 52px;
-    box-sizing: border-box;
-  }
-  
-  .icon {
-    font-size: 28px;
-    transition: transform 0.3s ease-in-out;
-    transform: rotate(180deg); 
-  }
-  
-  .icon.open {
-    transform: rotate(0deg); 
-  }
-  
-  H3 {
-    font-size: 24px;
-  }
-  
+@use "../../../Styles/global.scss" as *;
 
-  p {
+/* === COLLAPSE CONTAINER === */
+.collapse {
+  width: 100%;
+  max-width: 1023px;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+/* === COLLAPSE HEADER === */
+.collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #ff6060;
+  color: white;
+  cursor: pointer;
+  height: 52px;
+  box-sizing: border-box;
+}
+
+/* === ICON ROTATION === */
+.icon, .arrow {
+  font-size: 28px;
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.icon.open, .arrow.open {
+  transform: rotate(0deg);
+}
+
+/* === TEXT STYLES === */
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 25.67px;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* === COLLAPSE CONTENT === */
+.collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  padding: 0 15px;
+}
+
+.collapse-content.show {
+  max-height: 200px;
+  padding: 15px;
+}
+
+/* === PROPERTY COLLAPSES === */
+.property-collapses {
+  display: flex;
+  gap: 75px;
+  align-items: flex-start;
+}
+
+/* === EQUIPMENTS LIST === */
+.equipments-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
     font-size: 18px;
     line-height: 25.67px;
-    margin : 0;
-    font-weight: 400;
+    color: #333;
+  }
+}
+
+/* === RESPONSIVE STYLES === */
+@media (max-width: 768px) {
+  h3 {
+    font-size: 13px;
   }
 
+  .collapse {
+    margin: 20px auto;
+  }
 
-  .arrow {
-    transition: transform 0.3s ease;
-  }
-  
-  .arrow.open {
-    transform: rotate(180deg);
-  }
-  
-  .collapse-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-    padding: 0 15px;
-  }
-  
-  .collapse-content.show {
-    max-height: 200px; 
-    padding: 15px;
-  }
-  
   .property-collapses {
-    display: flex;
-    gap: 75px; 
-    align-items: flex-start;  
-  }
-
-
-  .equipments-list {
-    list-style-type: none;
-    padding: 0;
+    display: block;
     margin: 0;
-  
-    li {
-      font-size: 18px; 
-      line-height: 25.67px;
-      color: #333;
-    }
   }
-  
 
-      /** Version mobile **/
-      @media (max-width: 768px) {
-        H3 {
-          font-size: 13px;
-        }
-        p {
-          font-size: 12px;
-        }
-        .collapse {
-          width: 100%;
-          max-width: 1023px;
-          margin: 20px auto; 
-        }
-        
-        .property-collapses {
-          display: block;
-          margin:0
-        }
-        .collapse-header { 
-          height: 30px;
-        }
+  .collapse-header {
+    height: 30px;
+  }
 
-        .equipments-list { 
-          li {
-            font-size: 12px; 
-            line-height: 17.11px;
-            color: #333;
-          }
-        }
-        
-  } 
+  .equipments-list li, .collapse-content p {
+    font-size: 12px;
+    line-height: 17.11px;
+  }
+}

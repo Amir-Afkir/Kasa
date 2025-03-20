@@ -21,7 +21,7 @@ function Property() {
 
   // Si l'ID est invalide, rediriger vers la page 404
   if (!logement) {
-    return <Navigate to="/404" />;
+    return <Navigate to="/404" />; 
   }
 
   return (

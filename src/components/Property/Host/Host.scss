@@ -1,61 +1,51 @@
+/* === PROPERTY HOST CONTAINER === */
 .property-host {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 10px;
   text-align: right;
 
   .host {
-      display: flex; 
-      justify-content: space-between;
-      gap: 10px; 
-      
-  }
-  .host span {  
-
-      color: #FF6060;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 25.67px;
-      width: 100px;
-      padding :10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
   }
 
-  .host img { 
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: grey;  
+  .host span {
+    color: #FF6060;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.67px;
+    padding: 10px;
+  }
+  
+
+
+  .host img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: grey;
   }
 }
 
-/** Version mobile **/
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
-    .property-host {
-        display: flex;
-        flex-direction: row-reverse; // Permet d'aligner horizontalement
-        justify-content: space-between; // Espacement entre les éléments
-        align-items: center;
-        width: 100%;
+  .property-host {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
 
-        .host {
-            display: flex;
-            align-items: center;
-            gap: 10px; 
-        }
+    .host span {
+        font-size: 12px;
+        line-height: 17.11px;
+      }
+      
 
-        .host span {  
-            color: #FF6060;
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 17.11px; 
-            width: 50px; 
-        }
-
-        .host img { 
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: grey;  
-        }
+    .host img {
+      width: 32px;
+      height: 32px;
     }
+  }
 }

@@ -1,59 +1,61 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 35px;
-  
-    .header-logo img {
-      height: 68px;
-    }
-  
-    .header-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 70px;
-  
-      li {
-        display: inline;
-  
-        a {
-          font-family: 'Montserrat';
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 34.22px;
-          text-align: right;
-          text-decoration: none;
-          color: black;
-          transition: 0.3s ease-in-out;
-  
-          &.active {
-            text-decoration: underline;
-          }
+@use "../../../Styles/global.scss" as *;
 
+/* === HEADER STYLES === */
+.header {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px;
+
+  .header-logo img {
+    height: 68px;
+  }
+
+  .header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+
+    li {
+      display: inline;
+
+      a {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 34.22px;
+        text-decoration: none;
+        color: black;
+        transition: 0.3s ease-in-out;
+
+        &.active {
+          text-decoration: underline;
         }
       }
     }
-  
-    /** Version mobile **/
-    @media (max-width: 768px) {
-      padding: 20px;
-  
-      .header-logo img {
-        height: 47px; 
-      }
-  
-      .header-nav ul {
-        gap: 30px;  
-      }
-  
-      .header-nav ul li a { 
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 17.11px;
-        text-transform: uppercase; 
-      }
+  }
+}
+
+/* === RESPONSIVE HEADER === */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+
+    .header-logo img {
+      height: 47px;
+    }
+
+    .header-nav ul {
+      padding-inline-start: 0px;
+      gap: 20px;
+    }
+
+    .header-nav ul li a {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 17.11px;
+      text-transform: uppercase;
     }
   }
-  
+}

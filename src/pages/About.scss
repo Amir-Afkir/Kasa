@@ -1,6 +1,6 @@
+@use "../Styles/global.scss" as *;
+
+/* === ABOUT CONTAINER === */
 .About-container {
-    max-width: 1240px;  
-    margin: 0 auto;   
-    padding: 0 20px; 
-  }
-  
+  @extend .container;
+}

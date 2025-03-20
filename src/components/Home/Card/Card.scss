@@ -1,0 +1,78 @@
+@use "../../../Styles/global.scss" as *;
+
+/* === CARD CONTAINER === */
+.Card-container {
+  @extend .container;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // ✅ Ajustement automatique des colonnes
+  gap: 50px 20px;
+  justify-content: center;
+  justify-items: center;
+  margin: 50px auto;
+  padding: 50px;
+  background: #F6F6F6;
+  border-radius: 25px;
+}
+
+/* === CARD STYLES === */
+.Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 1;
+  }
+
+  h2 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25.67px;
+    letter-spacing: 0%;
+
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .Card-container {
+    gap: 30px 20px;
+    margin: 30px auto;
+    padding: 0;
+    background: none;
+  }
+
+  .Card {
+    width: 100%; // ✅ S'adapte à la largeur du conteneur en mobile
+    max-width: 335px;
+    height: 255px;
+  }
+}

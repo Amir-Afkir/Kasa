@@ -1,6 +1,6 @@
+@use "../Styles/global.scss" as *;
+
+/* === HOME CONTAINER === */
 .home-container {
-    max-width: 1240px;  
-    margin: 0 auto;   
-    padding: 0 20px; 
-  }
-  
+  @extend .container;
+}

@@ -1,19 +1,18 @@
 import React from "react";
-import Banner from "../components/Home/Banner/Banner";
+import Banner from "../components/common/Banner/Banner.jsx";
 import "./Home.scss";
-import Gallery from "../components/Home/Gallery/Gallery";
+import Card from "../components/Home/Card/Card";
 import logements from "../data/logements.json"; 
-
 
 function Home() {
     return (
       <div className="home-container">
-        <Banner image="/images/home-banner.jpg" text="Chez vous, partout et ailleurs" />
-        <div className="gallery-container">
+        <Banner image="/images/home-banner.webp" text="Chez vous, partout et ailleurs" />
+        <div className="Card-container">
           {logements.map((logement) => (
-            <Gallery 
+            <Card 
               key={logement.id} 
-              id={logement.id}  // Ajoute l'ID ici
+              id={logement.id}
               title={logement.title} 
               image={logement.cover} 
             />
@@ -21,6 +20,6 @@ function Home() {
         </div>
       </div>
     );
-  }
+}
 
 export default Home;
