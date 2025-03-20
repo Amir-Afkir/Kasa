@@ -25,13 +25,13 @@
 }
 
 /* === ICON ROTATION === */
-.icon, .arrow {
+.icon {
   font-size: 28px;
   transition: transform 0.3s ease-in-out;
   transform: rotate(180deg);
 }
 
-.icon.open, .arrow.open {
+.icon.open {
   transform: rotate(0deg);
 }
 
@@ -103,5 +103,9 @@ h3 {
   .equipments-list li, .collapse-body {
     font-size: 12px;
     line-height: 17.11px;
+  }
+
+  .icon {
+    font-size: 16px;
   }
 }
