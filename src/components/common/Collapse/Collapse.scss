@@ -40,7 +40,8 @@ h3 {
   font-size: 24px;
 }
 
-p {
+.collapse-body  {
+  color : black;
   font-size: 18px;
   line-height: 25.67px;
   margin: 0;
@@ -99,7 +100,7 @@ p {
     height: 30px;
   }
 
-  .equipments-list li, .collapse-content p {
+  .equipments-list li, .collapse-body {
     font-size: 12px;
     line-height: 17.11px;
   }

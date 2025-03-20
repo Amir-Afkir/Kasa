@@ -1,3 +1,5 @@
+// App.jsx - Composant principal qui gère la navigation entre les pages avec React Router.
+
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";

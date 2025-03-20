@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Slideshow.scss";
 
 function Slideshow({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Précharger toutes les images dès que le composant est monté
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [images]);
 
   // Ne pas afficher les boutons si une seule image
   if (images.length === 0) return null;

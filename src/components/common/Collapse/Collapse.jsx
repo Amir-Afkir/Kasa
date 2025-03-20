@@ -16,7 +16,7 @@ function Collapse({ title, content }) {
         <FaChevronDown className={`icon ${isOpen ? "open" : ""}`} />
       </div>
       <div className={`collapse-content ${isOpen ? "show" : ""}`}>
-       <p>{content}</p>
+        <div className="collapse-body">{content}</div>
       </div>
     </div>
   );
